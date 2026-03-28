@@ -1,0 +1,29 @@
+# Source (not needed - dist/ has compiled output)
+src/
+
+# Tests
+tests/
+coverage/
+
+# Documentation
+docs/
+
+# Example app
+example/
+
+# Claude config
+.claude/
+
+# Development files
+*.md
+!README.md
+plan.md
+
+# Config files
+eslint.config.js
+vite.config.js
+vitest.config.js
+
+# Git
+.git/
+.gitignore

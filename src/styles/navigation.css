@@ -1,0 +1,135 @@
+/* Nextant Navigation Styles */
+/* Base styles that work with Tailwind CSS */
+
+/* Reset */
+.nextant-tab-view,
+.nextant-stack,
+.nextant-drawer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tab View */
+.nextant-tab-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.nextant-tab-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.nextant-tab-screen {
+  position: absolute;
+  inset: 0;
+}
+
+.nextant-tab-bar {
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Stack View */
+.nextant-stack {
+  overflow: hidden;
+}
+
+.nextant-stack-item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nextant-stack-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.nextant-stack-screen-content {
+  flex: 1;
+  overflow: auto;
+}
+
+/* Header */
+.nextant-header {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  padding-top: env(safe-area-inset-top);
+  flex-shrink: 0;
+}
+
+/* Drawer View */
+.nextant-drawer {
+  overflow: hidden;
+}
+
+.nextant-drawer-scene {
+  width: 100%;
+  height: 100%;
+}
+
+.nextant-drawer-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.nextant-drawer-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
+.nextant-drawer-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* CSS Variables for theming */
+:root {
+  --nextant-primary: rgb(0, 122, 255);
+  --nextant-background: rgb(255, 255, 255);
+  --nextant-card: rgb(255, 255, 255);
+  --nextant-text: rgb(28, 28, 30);
+  --nextant-border: rgb(216, 216, 216);
+  --nextant-notification: rgb(255, 59, 48);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nextant-primary: rgb(10, 132, 255);
+    --nextant-background: rgb(0, 0, 0);
+    --nextant-card: rgb(28, 28, 30);
+    --nextant-text: rgb(255, 255, 255);
+    --nextant-border: rgb(39, 39, 41);
+    --nextant-notification: rgb(255, 69, 58);
+  }
+}
+
+/* Utilities */
+.nextant-safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.nextant-safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nextant-safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.nextant-safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
