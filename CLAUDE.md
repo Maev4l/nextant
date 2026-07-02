@@ -84,7 +84,7 @@ src/
 - Use fat arrow notation for functions
 - Use dayjs (not moment) if date handling needed
 - Strict versioning in package.json
-- ESLint config in eslint.config.js
+- Oxlint config in .oxlintrc.json
 - Comments emphasize WHY, not HOW
 - Run `yarn lint` before committing
 
